@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hmtpk/presentation/shedule.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hmtpk/widgets/testshedule.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
@@ -21,9 +22,9 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.montserrat().fontFamily,
         useMaterial3: true,
        ),
-      initialRoute: '/schedule',
+      initialRoute: '/shedule',
       routes: {
-        '/schedule': (context) => const SchedulePage(),
+        '/shedule': (context) => const ShedulePage(),
       },
     );
   }
