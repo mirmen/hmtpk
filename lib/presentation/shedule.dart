@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hmtpk/widgets/tablecalendar.dart';
+import 'package:hmtpk/widgets/testshedule.dart';
 
 
-class SchedulePage extends StatefulWidget {
-  const SchedulePage({super.key});
+class ShedulePage extends StatefulWidget {
+  const ShedulePage({super.key});
 
   @override
-  State<SchedulePage> createState() => _SchedulePageState();
+  State<ShedulePage> createState() => _ShedulePageState();
 }
 
-class _SchedulePageState extends State<SchedulePage> {
+class _ShedulePageState extends State<ShedulePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,53 +21,30 @@ class _SchedulePageState extends State<SchedulePage> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Widget>[
             TableCalendarWidget(), // lib/widgets/tablecalendar.dart
-            Padding(padding: EdgeInsets.all(MediaQuery.of(context).size.height * 0.015)),
-            //Text('123273627352352735662735273527352735527352735')
-            Container(
-              // color: Colors.red,
-              width: MediaQuery.of(context).size.width * 0.9,
-              height: 200,
-              child: Column(
-                children: [
-                  Row(
-                      children: [
-                        Column(
-                          children: [
-                            Text('8:00'),
-                            Text('8:45')
-                          ],
-                        ),
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.05,
-                        ),
-                        Expanded(
-                          child: Text(
-                            'Производственная практика "Создание мобильных приложений на Flutter"',
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 4,
-                            softWrap: true,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold
-                            ),
-                          ),
-                        ),
-                      ]
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.person, size: 16,),
-                      Text('Руководитель практики', style: TextStyle(
-                        fontWeight: FontWeight.w100,
-                        fontSize: 12
-                      ),),
-                    ],
-                  )
-                ],
-              ),
-            )
+            TestShedule(
+                startTime: '8:00',
+                endTime: '8:45',
+                subjectName: 'Основы кроссплатформенной мобильной разработки на Flutter ',
+                teacherName: 'Мельгазиев Эмир Русланович',
+                classroomBody: 'ауд. У-777 / УК Уральская, 11'
+            ),
+            TestShedule(
+                startTime: '8:00',
+                endTime: '8:45',
+                subjectName: 'Основы кроссплатформенной мобильной разработки на Flutter ',
+                teacherName: 'Мельгазиев Эмир Русланович',
+                classroomBody: 'ауд. У-777 / УК Уральская, 11'
+            ),
+            TestShedule(
+                startTime: '8:00',
+                endTime: '8:45',
+                subjectName: 'Основы кроссплатформенной мобильной разработки на Flutter odfoidghfidghfiudghfiudfgbdifdiufhdifhdfhdhdufhhdfuhfdofodjfodjfodfd',
+                teacherName: 'Мельгазиев Эмир Русланович',
+                classroomBody: 'ауд. У-777 / УК Уральская, 11'
+            ),
+            //TestShedule()
           ],
         ),
       ),
