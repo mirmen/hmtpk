@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
-class TestShedule extends StatefulWidget {
+/* TO DO
+1. ДОБАВИТЬ АВТОПЕРЕНОС ФИО ПРЕПОДА ПРИ НЕХВАТКЕ МЕСТА
+2. ДОБАВИТЬ АВТОПЕРЕНОС АУДИТОРИИ ПРИ НЕХВАТКЕ МЕСТА
+*/
+
+class LessonWidget extends StatefulWidget {
   final String startTime;
   final String endTime;
   final String subjectName;
   final String teacherName;
   final String classroomBody;
-  const TestShedule({
+  const LessonWidget({
     super.key,
     required this.startTime,
     required this.endTime,
@@ -16,10 +21,10 @@ class TestShedule extends StatefulWidget {
   });
 
   @override
-  State<TestShedule> createState() => _TestSheduleState();
+  State<LessonWidget> createState() => _LessonWidgetState();
 }
 
-class _TestSheduleState extends State<TestShedule> {
+class _LessonWidgetState extends State<LessonWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,7 +41,7 @@ class _TestSheduleState extends State<TestShedule> {
                right: MediaQuery.of(context).size.width * 0.05
            ),
            width: MediaQuery.of(context).size.width * 1,
-           height: MediaQuery.of(context).size.height * 0.1,
+           // height: MediaQuery.of(context).size.height * 0.1,
            child: Row(
              children: [
                Container(
@@ -56,9 +61,9 @@ class _TestSheduleState extends State<TestShedule> {
                        Text(
                          widget.subjectName,
                          overflow: TextOverflow.ellipsis,
-                         maxLines: 4,
+                         maxLines: 100, // максимальное количесто строк (при нехватке места текст переносится на следующую строку, где MaxLines - максимальное количество таких строк)
                          softWrap: true,
-                         style: TextStyle(
+                         style: const TextStyle(
                              fontWeight: FontWeight.bold
                          ),
                        ),
@@ -72,7 +77,7 @@ class _TestSheduleState extends State<TestShedule> {
                            ),),
                          ],
                        ),
-                       Text(widget.classroomBody, style: TextStyle(
+                       Text(widget.classroomBody, style: const TextStyle(
                            fontWeight: FontWeight.w100,
                            color: Colors.grey,
                            fontSize: 10
