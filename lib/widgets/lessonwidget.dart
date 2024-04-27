@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 /* TO DO
-1. ДОБАВИТЬ АВТОПЕРЕНОС ФИО ПРЕПОДА ПРИ НЕХВАТКЕ МЕСТА
-2. ДОБАВИТЬ АВТОПЕРЕНОС АУДИТОРИИ ПРИ НЕХВАТКЕ МЕСТА
+
 */
 
 class LessonWidget extends StatefulWidget {
@@ -66,17 +65,24 @@ class _LessonWidgetState extends State<LessonWidget> {
                          style: const TextStyle(
                              fontWeight: FontWeight.bold
                          ),
-                       ),
-                       Row(
-                         //mainAxisAlignment: MainAxisAlignment.center,
-                         children: [
-                           Icon(Icons.person, size: 16,),
-                           Text(widget.teacherName, style: TextStyle(
-                               fontWeight: FontWeight.w100,
-                               fontSize: 12
-                           ),),
-                         ],
-                       ),
+                        ),
+                          RichText(
+                              text: TextSpan(
+                                children: [
+                                  WidgetSpan(
+                                      child: const Icon(Icons.person, size: 16),
+                                  ),
+                                  WidgetSpan(
+                                    child: Text(
+                                        widget.teacherName,
+                                        style: const TextStyle(
+                                          fontWeight: FontWeight.w100,
+                                          fontSize: 12,
+                                        )
+                                    ),
+                                  ),
+                                ],
+                              )),
                        Text(widget.classroomBody, style: const TextStyle(
                            fontWeight: FontWeight.w100,
                            color: Colors.grey,
