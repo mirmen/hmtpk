@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hmtpk/widgets/tablecalendar.dart';
 import 'package:hmtpk/widgets/lessonwidget.dart';
@@ -14,11 +15,59 @@ class _ShedulePageState extends State<ShedulePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Drawer(
-        child: Center(
-          child: Text('Drawer'),
+      drawer: SafeArea(
+        child: Drawer(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Container(
+                  color: Color(0xff007bff),
+                  height: MediaQuery.of(context).size.height * 0.1,
+                ),
+                Container(
+                  child: RichText(
+                      text: TextSpan(
+                        children: [
+                          WidgetSpan(
+                            child: const Icon(Icons.person, size: 26),
+                          ),
+                          WidgetSpan(
+                            child: Text(
+                                'Студент',
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.w100,
+                                  fontSize: 20,
+                                )
+                            ),
+                          ),
+                        ],
+                      )),
+                ),
+                Container(
+                  child: RichText(
+                      text: TextSpan(
+                        children: [
+                          WidgetSpan(
+                            child: const Icon(Icons.people_rounded, size: 26),
+                          ),
+                          WidgetSpan(
+                            child: Text(
+                                'Преподаватели',
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.w100,
+                                  fontSize: 20,
+                                )
+                            ),
+                          ),
+                        ],
+                      )),
+                )
+              ],
+            ),
+            ),
+          ),
         ),
-      ),
       appBar: AppBar(
         leading: Builder(builder: (context) {
           return IconButton(
@@ -40,14 +89,16 @@ class _ShedulePageState extends State<ShedulePage> {
                 startTime: '8:00',
                 endTime: '8:45',
                 subjectName: 'Основы кроссплатформенной мобильной разработки на фреймворке Flutter ',
-                teacherName: 'Мельгазиев Эмир Русланович',
+                //teacherName: 'Мельгазиев Эмир Русланович',
+                teacherName: 'm1rmen',
                 classroomBody: 'ауд. У-777 / УК Уральская, 11'
             ),
             LessonWidget(
                 startTime: '8:50',
                 endTime: '9:35',
                 subjectName: 'Основы алгоритмизации и программирования на Dart ',
-                teacherName: 'Мельгазиев Эмир Русланович',
+                //teacherName: 'Мельгазиев Эмир Русланович',
+                teacherName: 'm2rmen',
                 classroomBody: 'ауд. У-777 / УК Уральская, 11'
             ),
             //TestShedule()
