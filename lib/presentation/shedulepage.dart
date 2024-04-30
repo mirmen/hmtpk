@@ -23,7 +23,7 @@ class _ShedulePageState extends State<ShedulePage> {
               children: [
                 Container(
                   color: Color(0xff007bff),
-                  height: MediaQuery.of(context).size.height * 0.1,
+                  height: MediaQuery.of(context).size.height * 0.059,
                 ),
                 Container(
                   child: RichText(
@@ -89,16 +89,16 @@ class _ShedulePageState extends State<ShedulePage> {
                 startTime: '8:00',
                 endTime: '8:45',
                 subjectName: 'Основы кроссплатформенной мобильной разработки на фреймворке Flutter ',
-                //teacherName: 'Мельгазиев Эмир Русланович',
-                teacherName: 'm1rmen',
+                teacherName: 'Мельгазиев Эмир Русланович',
+                // teacherName: 'm1rmen',
                 classroomBody: 'ауд. У-777 / УК Уральская, 11'
             ),
             LessonWidget(
                 startTime: '8:50',
                 endTime: '9:35',
                 subjectName: 'Основы алгоритмизации и программирования на Dart ',
-                //teacherName: 'Мельгазиев Эмир Русланович',
-                teacherName: 'm2rmen',
+                teacherName: 'Мельгазиев Эмир Русланович',
+                // teacherName: 'm2rmen',
                 classroomBody: 'ауд. У-777 / УК Уральская, 11'
             ),
             //TestShedule()
