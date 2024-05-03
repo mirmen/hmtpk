@@ -1,6 +1,12 @@
 import 'package:table_calendar/table_calendar.dart';
-// https://pub.dev/packages/table_calendar
 import 'package:flutter/material.dart';
+
+/*
+* ВИДЖЕТ ОТРИСОВЫВАЮЩИЙ НЕДЕЛЬНЫЙ КАЛЕНДАРЬ
+* ВНУТРИ ГЛАВНОЙ СТРАНИЦЫ С РАСПИСАНИЕМ
+*
+* */
+
 
 class TableCalendarWidget extends StatefulWidget {
   const TableCalendarWidget({super.key});

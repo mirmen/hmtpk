@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-/* TO DO
-
+/*
+ВИДЖЕТ, ОТРИСОВЫВАЮЩИЙ КОНТЕЙНЕР С ПОЛОВИНОЙ ПАРЫ (45 минут)
+ПОЛУЧАЕТ НА ВХОДЕ ДАННЫЕ О НАЧАЛЕ-КОНЦЕ П.ПАРЫ,
+ФИО ПРЕПОД., НАЗВАНИЕ ПРЕДМЕТА, КАБИНЕТ/КОРПУС
 */
 
 class LessonWidget extends StatefulWidget {

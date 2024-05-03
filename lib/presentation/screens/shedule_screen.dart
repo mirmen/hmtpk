@@ -1,17 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hmtpk/widgets/tablecalendar.dart';
-import 'package:hmtpk/widgets/lessonwidget.dart';
+import 'package:hmtpk/presentation/widgets/tablecalendar.dart';
+import 'package:hmtpk/presentation/widgets/lessonwidget.dart';
 
 
-class ShedulePage extends StatefulWidget {
-  const ShedulePage({super.key});
+class SheduleScreen extends StatefulWidget {
+  const SheduleScreen({super.key});
 
   @override
-  State<ShedulePage> createState() => _ShedulePageState();
+  State<SheduleScreen> createState() => _SheduleScreenState();
 }
 
-class _ShedulePageState extends State<ShedulePage> {
+class _SheduleScreenState extends State<SheduleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,12 +21,12 @@ class _ShedulePageState extends State<ShedulePage> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
-                  color: Color(0xff007bff),
+                  color: const Color(0xff007bff),
                   height: MediaQuery.of(context).size.height * 0.059,
                 ),
                 Container(
                   child: RichText(
-                      text: TextSpan(
+                      text: const TextSpan(
                         children: [
                           WidgetSpan(
                             child: const Icon(Icons.person, size: 26),
