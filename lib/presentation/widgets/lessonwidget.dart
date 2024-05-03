@@ -39,7 +39,8 @@ class _LessonWidgetState extends State<LessonWidget> {
            // color: Colors.red,
            padding: EdgeInsets.only(
                left: MediaQuery.of(context).size.width * 0.05,
-               right: MediaQuery.of(context).size.width * 0.05
+               right: MediaQuery.of(context).size.width * 0.05,
+               bottom: MediaQuery.of(context).size.height * 0.005,
            ),
            width: MediaQuery.of(context).size.width * 1,
            // height: MediaQuery.of(context).size.height * 0.1,
