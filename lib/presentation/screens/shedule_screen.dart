@@ -17,53 +17,7 @@ class _SheduleScreenState extends State<SheduleScreen> {
       drawer: SafeArea(
         child: Drawer(
           child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Container(
-                  color: const Color(0xff007bff),
-                  height: MediaQuery.of(context).size.height * 0.059,
-                ),
-                Container(
-                  child: RichText(
-                      text: const TextSpan(
-                        children: [
-                          WidgetSpan(
-                            child: const Icon(Icons.person, size: 26),
-                          ),
-                          WidgetSpan(
-                            child: Text(
-                                'Студент',
-                                style: const TextStyle(
-                                  fontWeight: FontWeight.w100,
-                                  fontSize: 20,
-                                )
-                            ),
-                          ),
-                        ],
-                      )),
-                ),
-                Container(
-                  child: RichText(
-                      text: TextSpan(
-                        children: [
-                          WidgetSpan(
-                            child: const Icon(Icons.people_rounded, size: 26),
-                          ),
-                          WidgetSpan(
-                            child: Text(
-                                'Преподаватели',
-                                style: const TextStyle(
-                                  fontWeight: FontWeight.w100,
-                                  fontSize: 20,
-                                )
-                            ),
-                          ),
-                        ],
-                      )),
-                )
-              ],
-            ),
+
             ),
           ),
         ),
@@ -83,7 +37,7 @@ class _SheduleScreenState extends State<SheduleScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            TableCalendarWidget(), // lib/widgets/tablecalendar.dart
+            TableCalendarWidget(), // lib/presentation/widgets/tablecalendar.dart
             LessonWidget(
                 startTime: '8:00',
                 endTime: '8:45',
