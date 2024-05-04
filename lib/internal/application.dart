@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hmtpk/presentation/screens/information_screen.dart';
 import 'package:hmtpk/presentation/screens/shedule_screen.dart';
 
 class Application extends StatelessWidget {
@@ -18,6 +19,7 @@ class Application extends StatelessWidget {
       initialRoute: '/shedule',
       routes: {
         '/shedule': (context) => const SheduleScreen(),
+        '/information': (context) => const InformationScreen()
       },
     );
   }
