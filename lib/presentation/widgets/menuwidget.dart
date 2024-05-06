@@ -6,7 +6,7 @@ class MenuWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
+      children: <Widget>[
         Container(
           width: MediaQuery.of(context).size.width,
           height: 56.0,
@@ -88,8 +88,31 @@ class MenuWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.settings),
+                Icon(Icons.info_rounded),
                 Text('Информация')
+              ],
+            ),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.rectangle,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.3),
+                    blurRadius: 4,
+                  )
+                ]
+            ),
+          ),
+        ),
+        GestureDetector(
+          onTap: () { print('Настройки'); },
+          child: Container(
+            height: MediaQuery.of(context).size.height * 0.06,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.settings),
+                Text('Настройки')
               ],
             ),
             decoration: BoxDecoration(
