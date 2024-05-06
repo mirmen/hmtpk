@@ -1,16 +1,22 @@
-# hmtpk
+# ХМТПК Расписание
 
-A new Flutter project.
+Неофициальное приложение для просмотра расписания занятий Ханты-Мансийского технолого-педагогического колледжа, разработанное на фреймворке Flutter.
 
-## Getting Started
+## Возможности
 
-This project is a starting point for a Flutter application.
+- Удобный просмотр расписания занятий (неделя, 2 недели, месяц), как для студентов, так и для преподавателей
+- Отображение информации о преподавателях, аудиториях и дисциплинах
+- Удобный интерфейс с поддержкой темной/светлой темы
 
-A few resources to get you started if this is your first Flutter project:
+## Статус проекта
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+К сожалению, на данный момент проект заморожен, так как колледж не предоставляет API для доступа к расписанию. Без возможности интеграции с официальными данными, дальнейшее развитие приложения становится невозможным.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Скриншоты
+
+![main_light_theme](https://github.com/mirmen/hmtpk/assets/57301556/4034e1c7-117c-466a-be7c-b12cc7ec7c75)
+![drawer_light_theme](https://github.com/mirmen/hmtpk/assets/57301556/66014d35-8df4-4608-ad71-0c247ee3f761)
+![Screenshot_20240506_162938](https://github.com/mirmen/hmtpk/assets/57301556/e9a70105-22ae-49a6-a0b2-7444d8f0e150)
+![main_dark_theme](https://github.com/mirmen/hmtpk/assets/57301556/c3499e16-71b6-4a9b-ad91-58815fb4eef0)
+
+  
