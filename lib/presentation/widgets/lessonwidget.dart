@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hmtpk/internal/theme.dart';
+import 'package:provider/provider.dart';
+import 'package:hmtpk/internal/application.dart';
 
 /*
 ВИДЖЕТ, ОТРИСОВЫВАЮЩИЙ КОНТЕЙНЕР С ПОЛОВИНОЙ ПАРЫ (45 минут)
@@ -28,6 +31,10 @@ class LessonWidget extends StatefulWidget {
 class _LessonWidgetState extends State<LessonWidget> {
   @override
   Widget build(BuildContext context) {
+
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    final theme = themeProvider.isDarkMode ? darkTheme : lightTheme;
+
     return Container(
            // decoration: BoxDecoration(
            //   border: Border.all(
@@ -49,7 +56,7 @@ class _LessonWidgetState extends State<LessonWidget> {
                Container(
                  child: Column(
                    children: [
-                     Text(widget.startTime),
+                     Text(widget.startTime, style: theme.textTheme.bodyMedium,),
                      Text(widget.endTime)
                    ],
                  ),
@@ -65,32 +72,25 @@ class _LessonWidgetState extends State<LessonWidget> {
                          overflow: TextOverflow.ellipsis,
                          maxLines: 100, // максимальное количесто строк (при нехватке места текст переносится на следующую строку, где MaxLines - максимальное количество таких строк)
                          softWrap: true,
-                         style: const TextStyle(
-                             fontWeight: FontWeight.bold
-                         ),
+                         style: theme.textTheme.bodyLarge
                         ),
                           RichText(
                               text: TextSpan(
                                 children: [
                                   WidgetSpan(
-                                      child: const Icon(Icons.person, size: 16),
+                                      child: Icon(Icons.person, size: 16, color: theme.iconTheme.color,),
                                   ),
                                   WidgetSpan(
                                     child: Text(
                                         widget.teacherName,
-                                        style: const TextStyle(
-                                          fontWeight: FontWeight.w100,
-                                          fontSize: 12,
-                                        )
+                                        style: theme.textTheme.bodyMedium
                                     ),
                                   ),
                                 ],
                               )),
-                       Text(widget.classroomBody, style: const TextStyle(
-                           fontWeight: FontWeight.w100,
-                           color: Colors.grey,
-                           fontSize: 10
-                       ),),
+                       Text(widget.classroomBody,
+                           style: theme.textTheme.bodySmall
+                       ),
                      ],
                    ),
                  ),

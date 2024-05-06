@@ -8,13 +8,15 @@ final ThemeData lightTheme = ThemeData(
   useMaterial3: true,
   brightness: Brightness.light,
   scaffoldBackgroundColor: Colors.white,
-  appBarTheme: const AppBarTheme(
+  appBarTheme: AppBarTheme(
       backgroundColor: Color(0xff007bff),
       titleTextStyle: TextStyle(
           color: Colors.white,
-          fontWeight: FontWeight.w600
+          fontWeight: FontWeight.bold,
+          fontFamily: GoogleFonts.montserrat().fontFamily,
+          fontSize: 20
       ),
-      iconTheme: const IconThemeData(
+      iconTheme: IconThemeData(
           color: Colors.white
       )
   ),
@@ -24,62 +26,71 @@ final ThemeData lightTheme = ThemeData(
   iconTheme: const IconThemeData(
       color: Colors.black
   ),
-  textTheme: const TextTheme(
+  textTheme: TextTheme(
       bodyLarge: TextStyle(
           fontWeight: FontWeight.bold,
-          color: Colors.black
+          color: Colors.black,
+          fontFamily: GoogleFonts.montserrat().fontFamily
       ),
       bodyMedium: TextStyle(
           fontWeight: FontWeight.w100,
           fontSize: 12,
-          color: Colors.black
+          color: Colors.black,
+          fontFamily: GoogleFonts.montserrat().fontFamily
       ),
       bodySmall: TextStyle(
           color: Colors.grey,
           fontSize: 10,
-          fontWeight: FontWeight.w100
+          fontWeight: FontWeight.w100,
+          fontFamily: GoogleFonts.montserrat().fontFamily
       )
   ),
 );
 
 // Темная тема для приложения
 final ThemeData darkTheme = ThemeData(
-  colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+  colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent, brightness: Brightness.dark),
   fontFamily: GoogleFonts.montserrat().fontFamily,
   useMaterial3: true,
   brightness: Brightness.dark,
-  scaffoldBackgroundColor: Colors.black38,
-  appBarTheme: const AppBarTheme(
+  scaffoldBackgroundColor: Colors.black,
+  appBarTheme: AppBarTheme(
       backgroundColor: Color(0xff007bff),
       titleTextStyle: TextStyle(
           color: Colors.white,
-          fontWeight: FontWeight.w600
+          fontWeight: FontWeight.bold,
+          fontFamily: GoogleFonts.montserrat().fontFamily,
+          fontSize: 20
       ),
-      iconTheme: const IconThemeData(
+      iconTheme: IconThemeData(
           color: Colors.white
       )
   ),
   drawerTheme: const DrawerThemeData(
-    backgroundColor: Colors.black,
+      backgroundColor: Colors.black
   ),
   iconTheme: const IconThemeData(
       color: Colors.white
   ),
-  textTheme: const TextTheme(
+  textTheme: TextTheme(
       bodyLarge: TextStyle(
           fontWeight: FontWeight.bold,
-          color: Colors.white
+          color: Colors.white,
+          fontFamily: GoogleFonts.montserrat().fontFamily
       ),
       bodyMedium: TextStyle(
           fontWeight: FontWeight.w100,
           fontSize: 12,
-          color: Colors.white
+          color: Colors.white,
+          fontFamily: GoogleFonts.montserrat().fontFamily
       ),
       bodySmall: TextStyle(
           color: Colors.grey,
           fontSize: 10,
-          fontWeight: FontWeight.w100
-      )
+          fontWeight: FontWeight.w100,
+          fontFamily: GoogleFonts.montserrat().fontFamily
+      ),
+
   ),
 );
 

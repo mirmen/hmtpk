@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:hmtpk/internal/theme.dart';
+import 'package:provider/provider.dart';
+import 'package:hmtpk/internal/application.dart';
 
 class MenuWidget extends StatelessWidget {
   const MenuWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    final theme = themeProvider.isDarkMode ? darkTheme : lightTheme;
+
     return Column(
       children: <Widget>[
         Container(
@@ -20,15 +27,15 @@ class MenuWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.supervisor_account),
-                Text('Студенту')
+                Text('Студенту',)
               ],
             ),
             decoration: BoxDecoration(
-                color: Colors.white,
+                color: theme.scaffoldBackgroundColor,
                 shape: BoxShape.rectangle,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
+                    color: Colors.grey.withOpacity(0.3),
                     blurRadius: 4,
                   )
                 ]
@@ -47,11 +54,11 @@ class MenuWidget extends StatelessWidget {
               ],
             ),
             decoration: BoxDecoration(
-                color: Colors.white,
+                color: theme.scaffoldBackgroundColor,
                 shape: BoxShape.rectangle,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
+                    color: Colors.grey.withOpacity(0.3),
                     blurRadius: 4,
                   )
                 ]
@@ -70,11 +77,11 @@ class MenuWidget extends StatelessWidget {
               ],
             ),
             decoration: BoxDecoration(
-                color: Colors.white,
+                color: theme.scaffoldBackgroundColor,
                 shape: BoxShape.rectangle,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
+                    color: Colors.grey.withOpacity(0.3),
                     blurRadius: 4,
                   )
                 ]
@@ -93,11 +100,11 @@ class MenuWidget extends StatelessWidget {
               ],
             ),
             decoration: BoxDecoration(
-                color: Colors.white,
+                color: theme.scaffoldBackgroundColor,
                 shape: BoxShape.rectangle,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
+                    color: Colors.grey.withOpacity(0.3),
                     blurRadius: 4,
                   )
                 ]
@@ -116,11 +123,11 @@ class MenuWidget extends StatelessWidget {
               ],
             ),
             decoration: BoxDecoration(
-                color: Colors.white,
+                color: theme.scaffoldBackgroundColor,
                 shape: BoxShape.rectangle,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.3),
+                    color: Colors.grey.withOpacity(0.3),
                     blurRadius: 4,
                   )
                 ]

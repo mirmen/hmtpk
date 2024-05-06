@@ -60,7 +60,7 @@ class _TableCalendarWidgetState extends State<TableCalendarWidget> {
         selectedDecoration: BoxDecoration(
           color: Color(0xff007bff),
           shape: BoxShape.circle
-        )
+        ),
       ),
     );
   }

@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:hmtpk/presentation/widgets/menuwidget.dart';
 import 'package:hmtpk/presentation/widgets/tablecalendar.dart';
 import 'package:hmtpk/presentation/widgets/lessonwidget.dart';
+import 'package:hmtpk/internal/theme.dart';
+import 'package:provider/provider.dart';
+import 'package:hmtpk/internal/application.dart';
 
 
 class SheduleScreen extends StatefulWidget {
@@ -15,8 +18,12 @@ class SheduleScreen extends StatefulWidget {
 class _SheduleScreenState extends State<SheduleScreen> {
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    final theme = themeProvider.isDarkMode ? darkTheme : lightTheme;
+
     return Scaffold(
+      backgroundColor: theme.scaffoldBackgroundColor,
       drawer: SafeArea(
         child: Drawer(
           child: SingleChildScrollView(
@@ -25,17 +32,18 @@ class _SheduleScreenState extends State<SheduleScreen> {
           ),
         ),
       appBar: AppBar(
+        iconTheme: theme.appBarTheme.iconTheme,
         leading: Builder(builder: (context) {
           return IconButton(
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
-            icon: Icon(Icons.menu, color: Colors.white),
+            icon: Icon(Icons.menu),
           );
         }
         ),
-        title: const Text('Расписание', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),),
-        backgroundColor: const Color(0xff007bff),
+        title: Text('Расписание', style: theme.appBarTheme.titleTextStyle),
+        backgroundColor: theme.appBarTheme.backgroundColor,
       ),
       body: SingleChildScrollView(
         child: Column(
