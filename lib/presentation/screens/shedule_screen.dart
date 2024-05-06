@@ -15,6 +15,7 @@ class SheduleScreen extends StatefulWidget {
 class _SheduleScreenState extends State<SheduleScreen> {
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
       drawer: SafeArea(
         child: Drawer(
@@ -29,7 +30,7 @@ class _SheduleScreenState extends State<SheduleScreen> {
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
-            icon: const Icon(Icons.menu, color: Colors.white,),
+            icon: Icon(Icons.menu, color: Colors.white),
           );
         }
         ),
