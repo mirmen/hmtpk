@@ -9,6 +9,7 @@ class InformationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       drawer: SafeArea(
         child: Drawer(
           child: SingleChildScrollView(
@@ -37,22 +38,40 @@ class InformationScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Добро пожаловать в неофициальное мобильное приложение Ханты-Мансийского технолого-педагогического колледжа! Приложение разработано, чтобы сделать жизнь студентов и преподавателей колледжа проще и удобнее. В нем мы попытались устранить все недостатки прошлого приложения и реализовать идеи и потребности студентов и преподавателей. Основная функция приложения - это удобный просмотр актуального расписания занятий, экзаменов и других важных событий. ',
+                const Text(
+                  'Добро пожаловать в неофициальное мобильное приложение Ханты-Мансийского технолого-педагогического колледжа! Приложение разработано, чтобы сделать жизнь в колледже проще и удобнее. В нем мы попытались устранить все недостатки прошлого приложения и реализовать идеи и потребности студентов и преподавателей. Основная функция приложения - это удобный просмотр актуального расписания занятий, экзаменов и других важных событий. ',
                   style: TextStyle(
                     fontWeight: FontWeight.w500
                   ),
                 ),
                 Padding(padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.height * 0.01)),
-                Text('Разработал студент группы ИСП-Б-232-2022 Мельгазиев Эмир Русланович', style: TextStyle(fontWeight: FontWeight.w600)),
+                const Text('Разработал студент группы ИСП-Б-232-2022 Мельгазиев Эмир Русланович', style: TextStyle(fontWeight: FontWeight.w600)),
                 GestureDetector(
                   onTap: () async {},
                   child: Row(
                   children: [
-                    Icon(Icons.telegram, color: Colors.blueAccent,),
-                    Text('t.me/emlgzv', style: TextStyle(color: Colors.blueAccent),),
+                    Icon(Icons.language_outlined, color: Colors.black,),
+                    Text('melgaziev.is-a.dev', style: TextStyle(color: Colors.black87),),
                   ],
                 ),
+                ),
+                GestureDetector(
+                  onTap: () async {},
+                  child: Row(
+                    children: [
+                      Icon(Icons.telegram, color: Color(0xff2AABEE),),
+                      Text('t.me/emlgzv', style: TextStyle(color: Color(0xff2AABEE)),),
+                    ],
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () async {},
+                  child: Row(
+                    children: [
+                      Icon(Icons.alternate_email, color: Color(0xff0077ff),),
+                      Text('vk.com/emelgar', style: TextStyle(color: Color(0xff0077ff)),),
+                    ],
+                  ),
                 )
               ],
             ),
