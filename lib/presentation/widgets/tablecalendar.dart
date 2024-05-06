@@ -21,7 +21,7 @@ class _TableCalendarWidgetState extends State<TableCalendarWidget> {
       locale: 'ru_RU', // локализация
       availableCalendarFormats: _availableCalendarFormats,
       availableGestures: AvailableGestures.horizontalSwipe,
-      firstDay: DateTime.utc(2024, 1, 1),
+      firstDay: DateTime.utc(2000, 1, 1),
       lastDay: DateTime.utc(2050, 1, 1),
       focusedDay: _focusedDay,
       selectedDayPredicate: (day) => isSameDay(day, _selectedDay),
